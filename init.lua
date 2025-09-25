@@ -1,4 +1,4 @@
-minetest.register_tool("yeet:yeet_stick", {
+minetest.register_tool("yeetstick:yeet_stick", {
     description = "Yeet Stick",
     inventory_image = "default_stick.png",
 
@@ -17,7 +17,7 @@ minetest.register_tool("yeet:yeet_stick", {
             local entity = pointed_thing.ref
             local dir = user:get_look_dir()
             local velocity = vector.multiply(dir, 60)
-            if entity and entity:get_velocity then
+            if entity and entity:get_velocity() then
                 entity:set_velocity(velocity)
             end
         end
